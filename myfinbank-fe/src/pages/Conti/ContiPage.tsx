@@ -83,7 +83,7 @@ export default function ContiPage() {
         refetchInterval: 10000,
     });
 
-    // 🔹 Stato per dialog dettaglio transazione
+    // Stato per dialog dettaglio transazione
     const [openDialog, setOpenDialog] = useState(false);
     const [transazioneSelezionata, setTransazioneSelezionata] = useState<TransazioneDto | null>(null);
     const [loadingDettaglio, setLoadingDettaglio] = useState(false);
@@ -330,7 +330,7 @@ export default function ContiPage() {
                                     </Table>
                                 </TableContainer>
 
-                                {/* 🔹 Paginazione */}
+                                {/* Paginazione */}
                                 <TablePagination
                                     component="div"
                                     count={listaTransazioni?.totalElements ?? 0}
@@ -348,7 +348,7 @@ export default function ContiPage() {
                 <Typography variant="body2">Il conto corrente non esiste.</Typography>
             )}
 
-            {/* 🔹 Dialog dettaglio transazione */}
+            {/* Dialog dettaglio transazione */}
             <Dialog open={openDialog} onClose={handleChiudiDialog} fullWidth maxWidth="sm">
                 <DialogTitle>Dettaglio Transazione</DialogTitle>
                 <DialogContent dividers>
